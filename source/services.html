@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Mental Health Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4F46E5;
+            --secondary-color: #10B981;
+            --background-color: #F9FAFB;
+            --text-color: #1F2937;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #6366F1);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: -3rem auto 4rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h2 {
+            color: var(--text-color);
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #6B7280;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: #4B5563;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #4338CA;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 3rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                padding: 0 1rem;
+                margin-top: -2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Our Mental Health Services</h1>
+        <p>Comprehensive support for your mental well-being through innovative AI-powered solutions and professional guidance</p>
+    </header>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h2>AI Therapy Assistant</h2>
+            <p>24/7 emotional support and guidance through our advanced AI companion</p>
+            <ul class="feature-list">
+                <li>Available anytime, anywhere</li>
+                <li>Personalized conversations</li>
+                <li>Complete privacy</li>
+                <li>Evidence-based approach</li>
+            </ul>
+            <a href="ai-agent.html" class="cta-button">Start Chat</a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h2>Mental Health Assessment</h2>
+            <p>Comprehensive evaluation of your mental well-being with personalized insights</p>
+            <ul class="feature-list">
+                <li>Quick assessment</li>
+                <li>Detailed analysis</li>
+                <li>Progress tracking</li>
+                <li>Actionable recommendations</li>
+            </ul>
+            <a href="#" class="cta-button">Take Assessment</a>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <h2>Educational Resources</h2>
+            <p>Access to comprehensive mental health education and self-help materials</p>
+            <ul class="feature-list">
+                <li>Expert-curated content</li>
+                <li>Interactive modules</li>
+                <li>Practical exercises</li>
+                <li>Regular updates</li>
+            </ul>
+            <a href="#" class="cta-button">Explore Resources</a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderate Depression - Assessment Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f1ff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #ffc000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .result-indicator {
+            background-color: #fff8e6;
+            color: #ffc000;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content {
+            padding: 0 20px 20px;
+        }
+
+        h2 {
+            color: #1f2937;
+            font-size: 1.25rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-description {
+            color: #6b7280;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .recommendation-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 12px 0;
+            color: #4b5563;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .primary-button {
+            background-color: #ffc000;
+            color: white;
+        }
+
+        .secondary-button {
+            background-color: #f3f4f6;
+            color: #4b5563;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .resource-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .resource-card h3 {
+            margin: 0 0 8px 0;
+            color: #374151;
+            font-size: 1rem;
+        }
+
+        .resource-card p {
+            margin: 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Assessment Results</h1>
+            <p>Based on your responses, you're showing signs of moderate depression.</p>
+        </div>
+
+        <div class="content">
+            <div class="result-indicator">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <circle cx="10" cy="10" r="8" fill="currentColor"/>
+                </svg>
+                Moderate Depression Level
+            </div>
+
+            <h2>Understanding Moderate Depression</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/yOx0Q273AsQ"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="video-description">
+                Learn more about managing moderate depression symptoms and maintaining mental wellness.
+            </p>
+
+            <h2>Maintaining Mental Wellness</h2>
+            <div class="recommendation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <circle cx="10" cy="10" r="8" fill="currentColor"/>
+                </svg>
+                Continue your current positive lifestyle habits
+            </div>
+            <div class="recommendation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <circle cx="10" cy="10" r="8" fill="currentColor"/>
+                </svg>
+                Practice regular self-care and stress management
+            </div>
+            <div class="recommendation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <circle cx="10" cy="10" r="8" fill="currentColor"/>
+                </svg>
+                Stay connected with your support network
+            </div>
+
+            <div class="button-container">
+                <a href="ai-agent.html" class="button primary-button">Talk to AI Assistant</a>
+                <a href="#" class="button secondary-button">Watch 3D Video</a>
+            </div>
+
+            <h2>Wellness Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Stress Management</h3>
+                    <p>Preventive techniques to maintain emotional balance.</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Healthy Lifestyle</h3>
+                    <p>Tips for maintaining physical and mental wellness.</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Meditation Basics</h3>
+                    <p>Simple meditation practices for daily mindfulness.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

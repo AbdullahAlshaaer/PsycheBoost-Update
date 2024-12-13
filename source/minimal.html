@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Depression - Assessment Results</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            color: #2d3748;
+        }
+
+        .chat-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #chat-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        #chat-input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+
+        #send-button {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        #send-button:hover {
+            background-color: #3182ce;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .user-message {
+            background-color: #ebf8ff;
+            margin-left: 2rem;
+        }
+
+        .assistant-message {
+            background-color: #f7fafc;
+            margin-right: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto 0;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .header {
+            background-color: #00b050;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-indicator {
+            background-color: #e8fff0;
+            color: #059669;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .recommendations {
+            margin: 2rem 0;
+        }
+
+        .recommendation-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+            color: #4b5563;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .primary-button {
+            background-color: #00b050;
+            color: white;
+        }
+
+        .secondary-button {
+            background-color: #f3f4f6;
+            color: #4b5563;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .resource-card {
+            background-color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .resource-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #374151;
+        }
+
+        .resource-card p {
+            margin: 0;
+            color: #6b7280;
+        }
+
+        .video-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+        }
+
+        .video-section h2 {
+            margin-top: 0;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+
+        .video-description {
+            margin-top: 1rem;
+            color: #6b7280;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Psyche Boost</a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Assessment Results</h1>
+            <p>Based on your responses, you're showing minimal signs of depression.</p>
+        </div>
+
+        <div class="result-indicator">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+            </svg>
+            Minimal Depression Level
+        </div>
+
+        <div class="video-section">
+            <h2>Understanding Minimal Depression</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/zTuX_ShUrw0"
+                    title="Understanding Minimal Depression"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="video-description">
+                Learn more about managing mild depression symptoms and maintaining mental wellness.
+            </p>
+        </div>
+
+        <div class="recommendations">
+            <h2>Maintaining Mental Wellness</h2>
+            <div class="recommendation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                Continue your current positive lifestyle habits
+            </div>
+            <div class="recommendation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                Practice regular self-care and stress management
+            </div>
+            <div class="recommendation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                </svg>
+                Stay connected with your support network
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="ai-agent.html" class="button primary-button">
+                Talk to AI Assistant
+            </a>
+            <a href="#" class="button secondary-button">
+                Watch 3D Video
+            </a>
+        </div>
+
+        <div class="resources">
+            <h2>Wellness Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Stress Management</h3>
+                    <p>Preventive techniques to maintain emotional balance.</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Healthy Lifestyle</h3>
+                    <p>Tips for maintaining physical and mental wellness.</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Meditation Basics</h3>
+                    <p>Simple meditation practices for daily mindfulness.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
